@@ -133,7 +133,7 @@ alias '??'=google
 alias 'c'=clear
 alias 'dotfiles'='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias 'cal'='cal -3'
-alias 'pams'='php artisan migrate:fresh && php artisan db:seed
+alias 'pams'='php artisan migrate:fresh && php artisan db:seed'
 
 #functions
 alias 'open'='function _open()
