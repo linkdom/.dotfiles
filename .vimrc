@@ -7,3 +7,6 @@ syntax on
 :set expandtab
 :set tabstop=4
 :set shiftwidth=4
+
+" prevents truncated yanks, deletes, etc.
+set viminfo='20,<1000,s1000
