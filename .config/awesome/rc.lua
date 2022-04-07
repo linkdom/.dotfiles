@@ -812,5 +812,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- }}}
 
+awful.spawn.with_shell("compton")
 beautiful.useless_gap = 4
 beautiful.gap_single_client = true
