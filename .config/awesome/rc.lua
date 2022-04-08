@@ -544,7 +544,10 @@ globalkeys = mytable.join(
               {description = "run prompt", group = "launcher"}),
 
     awful.key({ modkey, "Control" }, "b", function () awful.util.spawn("brave-browser") end,
-              {description = "brave-browser", group = "client"}),
+              {description = "brave-browser", group = "apps"}),
+
+    awful.key({ modkey, "Control" }, "s", function () awful.util.spawn("spotify") end,
+              {description = "spotify", group = "apps"}),
 
     awful.key({ modkey }, "x",
               function ()
