@@ -1,3 +1,4 @@
+# bash
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
@@ -6,9 +7,17 @@ alias '??'=google
 alias 'c'=clear
 alias 'dotfiles'='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias 'cal'='cal -3'
-alias 'pams'='php artisan migrate:fresh && php artisan db:seed'
+alias 'cb'='cd ..'
 
-# ls aliases
+# laravel
+alias 'pams'='php artisan migrate:fresh && php artisan db:seed'
+alias 'pas'='php artisan serve'
+alias 'nrw'='npm run watch'
+
+# git
+alias 'gis'='git status'
+
+# ls
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
