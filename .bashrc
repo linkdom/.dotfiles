@@ -118,3 +118,7 @@ set -o vi
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+if [ -e ~/.bash_functions ]; then
+   . ~/.bash_functions
+fi

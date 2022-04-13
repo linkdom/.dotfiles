@@ -15,6 +15,7 @@ alias 'pams'='php artisan migrate:fresh && php artisan db:seed'
 alias 'pas'='php artisan serve'
 alias 'nrw'='npm run watch'
 alias 'larapack'='php artisan make:model -msfc $1'
+alias 'console'='php artisan tinker'
 
 # git
 alias 'gis'='git status'
