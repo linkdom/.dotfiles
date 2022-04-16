@@ -1,5 +1,6 @@
 syntax on
 
+" sets
 :set nu
 :set ruler
 :set hlsearch
