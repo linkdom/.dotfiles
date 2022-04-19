@@ -11,7 +11,7 @@ alias 'cb'='cd ..'
 alias 'updag'='sudo apt update && sudo apt upgrade'
 
 # laravel
-alias 'pams'='php artisan migrate:fresh && php artisan db:seed'
+alias 'pamfs'='php artisan migrate:fresh && php artisan db:seed'
 alias 'pas'='php artisan serve'
 alias 'nrw'='npm run watch'
 alias 'larapack'='php artisan make:model -msfc $1'
