@@ -1,6 +1,5 @@
 syntax on
-
-" sets
+:set background=dark
 :set nu
 :set ruler
 :set hlsearch
@@ -20,3 +19,11 @@ syntax on
 
 " prevents truncated yanks, deletes, etc.
 set viminfo='20,<1000,s1000
+
+call plug#begin('~/.vim/plugged')
+Plug 'gruvbox-community/gruvbox'
+Plug 'preservim/nerdtree'
+
+call plug#end()
+
+colorscheme gruvbox
