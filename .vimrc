@@ -28,7 +28,11 @@ call plug#end()
 
 colorscheme gruvbox
 
-nnoremap <leader>n :NERDTreeFocus<CR>
+" Keyboard Remaps
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
+
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
