@@ -1,5 +1,6 @@
 syntax on
 :set background=dark
+:set t_Co=256
 :set nu
 :set ruler
 :set hlsearch
@@ -15,7 +16,7 @@ syntax on
 :set nowrap
 :set ignorecase
 :set smartcase
-:set scrolloff=8
+:set scrolloff=15
 
 " prevents truncated yanks, deletes, etc.
 set viminfo='20,<1000,s1000
@@ -30,8 +31,6 @@ call plug#end()
 colorscheme gruvbox
 
 " Keyboard Remaps
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-g> :Rg<CR>
 
