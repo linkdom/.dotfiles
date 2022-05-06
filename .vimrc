@@ -21,14 +21,17 @@ syntax on
 " prevents truncated yanks, deletes, etc.
 set viminfo='20,<1000,s1000
 
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 1
+
 call plug#begin('~/.vim/plugged')
-Plug 'gruvbox-community/gruvbox'
+Plug 'mhartington/oceanic-next'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
-colorscheme gruvbox
+colorscheme OceanicNext
 
 " Keyboard Remaps
 nnoremap <C-p> :GFiles<CR>
