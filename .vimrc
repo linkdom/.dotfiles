@@ -17,6 +17,7 @@ syntax on
 :set ignorecase
 :set smartcase
 :set scrolloff=15
+:set sidescrolloff=15
 
 " prevents truncated yanks, deletes, etc.
 set viminfo='20,<1000,s1000
