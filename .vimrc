@@ -23,6 +23,8 @@ syntax on
 " prevents truncated yanks, deletes, etc.
 set viminfo='20,<1000,s1000
 
+let mapleader = "\<space>"
+
 let g:oceanic_next_terminal_bold = 1
 let g:oceanic_next_terminal_italic = 1
 
@@ -33,12 +35,13 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'mhartington/oceanic-next'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-Plug 'sheerun/vim-polyglot'
+
+source ~/.config/vim/plugins/coc.vim
+source ~/.config/vim/plugins/fzf.vim
+source ~/.config/vim/plugins/commentary.vim
+source ~/.config/vim/plugins/surround.vim
+source ~/.config/vim/plugins/polyglot.vim
+source ~/.config/vim/plugins/oceanic-next.vim
 
 call plug#end()
 
