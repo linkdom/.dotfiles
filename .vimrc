@@ -35,6 +35,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'mhartington/oceanic-next'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
