@@ -18,6 +18,7 @@ syntax on
 :set smartcase
 :set scrolloff=15
 :set sidescrolloff=15
+:set nocompatible
 
 " prevents truncated yanks, deletes, etc.
 set viminfo='20,<1000,s1000
@@ -37,6 +38,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
