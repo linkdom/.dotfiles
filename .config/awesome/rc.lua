@@ -97,7 +97,7 @@ local terminal     = "alacritty"
 local vi_focus     = false -- vi-like client focus https://github.com/lcpz/awesome-copycats/issues/275
 local cycle_prev   = true  -- cycle with only the previously focused client or all https://github.com/lcpz/awesome-copycats/issues/274
 local editor       = os.getenv("vim") or "nvim"
-local browser      = ""
+local browser      = "brave-browser"
 
 awful.util.terminal = terminal
 awful.util.tagnames = { "1", "2", "3", "4", "5" }
@@ -267,12 +267,15 @@ globalkeys = mytable.join(
               {description = "take a screenshot", group = "hotkeys"}),
 
     -- X screen locker
-    awful.key({ altkey, "Control" }, "l", function () os.execute(scrlocker) end,
+    awful.key({ altkey, "Control" }, "l", function () os.execute(slock) end,
               {description = "lock screen", group = "hotkeys"}),
+
+    -- awful.key({ altkey, "Control" }, "l", function () awful.util.spawn("slock") end,
+    --           {description = "lock the screen", group = "hotkeys"}),
 
     -- Show help
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
-              {description="show help", group="awesome"}),
+              {description="show shortcuts", group="awesome"}),
 
     -- Tag browsing
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
@@ -545,6 +548,9 @@ globalkeys = mytable.join(
 
     awful.key({ modkey, "Control" }, "b", function () awful.util.spawn("brave-browser") end,
               {description = "brave-browser", group = "apps"}),
+
+    awful.key({ modkey, "Control" }, "l", function () awful.util.spawn("slock") end,
+              {description = "lock screen", group = "hotkeys"}),
 
     awful.key({ modkey, "Control" }, "s", function () awful.util.spawn("spotify") end,
               {description = "spotify", group = "apps"}),
