@@ -382,7 +382,7 @@ function theme.at_screen_connect(s)
             -- wibox.container.background(wibox.container.margin(wibox.widget { mpdicon, theme.mpd.widget, layout = wibox.layout.align.horizontal }, dpi(3), dpi(6)), theme.bg_focus),
             -- arrow(theme.bg_normal, "#343434"),
             -- wibox.container.background(wibox.container.margin(task, dpi(3), dpi(7)), "#343434"),
-            arrow("#343434", "#777E76"),
+            arrow("alpha", "#777E76"),
             wibox.container.background(wibox.container.margin(wibox.widget { memicon, mem.widget, layout = wibox.layout.align.horizontal }, dpi(2), dpi(3)), "#777E76"),
             arrow("#777E76", "#4B696D"),
             wibox.container.background(wibox.container.margin(wibox.widget { cpuicon, cpu.widget, layout = wibox.layout.align.horizontal }, dpi(3), dpi(4)), "#4B696D"),
