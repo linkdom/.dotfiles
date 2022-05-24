@@ -185,7 +185,7 @@ local cpu = lain.widget.cpu({
     end
 })
 
--- Coretemp
+ Coretemp
 local tempicon = wibox.widget.imagebox(theme.widget_temp)
 local temp = lain.widget.temp({
     settings = function()
