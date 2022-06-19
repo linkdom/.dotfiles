@@ -4,6 +4,8 @@ set.expandtab = true
 set.smarttab = true
 set.shiftwidth = 4
 set.tabstop = 4
+set.autoindent = true
+set.nu = true
 
 set.hlsearch = true
 set.incsearch = true
@@ -14,6 +16,7 @@ set.splitbelow = true
 set.splitright = true
 set.wrap = false
 set.scrolloff = 15
+set.sidescrolloff = 15
 set.termguicolors = true
 
 set.relativenumber = true
