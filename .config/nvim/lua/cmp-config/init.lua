@@ -57,3 +57,30 @@
   require('lspconfig')['sumneko_lua'].setup {
     capabilities = capabilities
   }
+  require('lspconfig')['bashls'].setup {
+    capabilities = capabilities
+  }
+  require('lspconfig')['cssls'].setup {
+    capabilities = capabilities
+  }
+  require('lspconfig')['html'].setup {
+    capabilities = capabilities
+  }
+  require('lspconfig')['marksman'].setup {
+    capabilities = capabilities
+  }
+  require('lspconfig')['psalm'].setup {
+    capabilities = capabilities
+  }
+  require('lspconfig')['pyright'].setup {
+    capabilities = capabilities
+  }
+  require('lspconfig')['tsserver'].setup {
+    capabilities = capabilities
+  }
+  require('lspconfig')['intelephense'].setup {
+    capabilities = capabilities
+  }
+  require('lspconfig')['phpactor'].setup {
+    capabilities = capabilities
+  }

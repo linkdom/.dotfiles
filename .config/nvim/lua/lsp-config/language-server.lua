@@ -62,6 +62,14 @@ require('lspconfig')['psalm'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
 }
+require('lspconfig')['intelephense'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
+require('lspconfig')['phpactor'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
 require('lspconfig')['sumneko_lua'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
