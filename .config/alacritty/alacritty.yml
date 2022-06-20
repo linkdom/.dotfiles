@@ -137,6 +137,19 @@ schemes:
 colors: *gruvbox_material_hard_dark
 
 font:
+  normal:
+    family: "JetBrainsMono NF"
+    style: Regular
+  bold:
+    family: "JetBrainsMono NF"
+    style: Bold
+  italic:
+    family: "JetBrainsMono NF"
+    style: Italic
+  bold_italic:
+    family: "JetBrainsMono NF"
+    style: Bold Italic
+
   size: 8 
 
 window:
