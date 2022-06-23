@@ -6,6 +6,10 @@ vim.g.mapleader = ' '
 map('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
 map('n', '<leader>ff', ':Telescope find_files<CR>', opts)
 map('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
+map('n', 'gcap', '@c', opts)
+map('n', 'guap', '@u', opts)
+map('n', 'gcl', '@l', opts)
+map('n', 'gul', '@z', opts)
 
 map('n', '<leader>k', ':wincmd k<CR>', opts)
 map('n', '<leader>j', ':wincmd j<CR>', opts)
