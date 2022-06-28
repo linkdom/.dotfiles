@@ -13,6 +13,7 @@ map('n', 'gcap', '@c', opts)
 map('n', 'guap', '@u', opts)
 map('n', 'gcl', '@l', opts)
 map('n', 'gul', '@z', opts)
+map('n', '<leader>ca', '@d', opts)
 
 map('n', '<leader>k', ':wincmd k<CR>', opts)
 map('n', '<leader>j', ':wincmd j<CR>', opts)
