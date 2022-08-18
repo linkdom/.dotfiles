@@ -104,11 +104,6 @@ fi
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 	  exec tmux
 fi
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-. "$HOME/.cargo/env"
-
 #Set the capslock key to the escape key
 test -n "$DISPLAY" && setxkbmap -option caps:escape &>/dev/null 
 

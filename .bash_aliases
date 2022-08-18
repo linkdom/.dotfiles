@@ -7,7 +7,8 @@ alias '??'=google
 alias 'c'=clear
 alias 'dotfiles'='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias 'cal'='cal -3'
-alias 'updag'='sudo apt update && sudo apt upgrade'
+alias 'v'='nvim'
+alias 'update'='sudo pacman -Syyu && yay -Syyu'
 alias '..'='cd ..'
 alias '...'='cd ../../'
 
