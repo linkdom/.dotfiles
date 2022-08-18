@@ -97,7 +97,7 @@ local terminal     = "alacritty"
 local vi_focus     = false -- vi-like client focus https://github.com/lcpz/awesome-copycats/issues/275
 local cycle_prev   = true  -- cycle with only the previously focused client or all https://github.com/lcpz/awesome-copycats/issues/274
 local editor       = os.getenv("vim") or "nvim"
-local browser      = "brave-browser"
+local browser      = "brave"
 
 awful.util.terminal = terminal
 awful.util.tagnames = { "1", "2", "3", "4", "5" }
@@ -267,10 +267,10 @@ globalkeys = mytable.join(
               {description = "take a screenshot", group = "hotkeys"}),
 
     -- X screen locker
-    awful.key({ altkey, "Control" }, "l", function () os.execute(slock) end,
+    awful.key({ altkey, "Control" }, "l", function () os.execute("betterlockscreen -l blur") os.execute("systemctl suspend") end,
               {description = "lock screen", group = "hotkeys"}),
 
-    -- awful.key({ altkey, "Control" }, "l", function () awful.util.spawn("slock") end,
+    -- awful.key({ altkey, "Control" }, "l", function () awful.util.spawn("betterlockscreen -l blur") end,
     --           {description = "lock the screen", group = "hotkeys"}),
 
     -- Show help
@@ -546,10 +546,10 @@ globalkeys = mytable.join(
     awful.key({ modkey }, "r", function () awful.util.spawn("dmenu_run") end,
               {description = "run prompt", group = "launcher"}),
 
-    awful.key({ modkey, "Control" }, "b", function () awful.util.spawn("brave-browser") end,
-              {description = "brave-browser", group = "apps"}),
+    awful.key({ modkey, "Control" }, "b", function () awful.util.spawn("brave") end,
+              {description = "brave", group = "apps"}),
 
-    awful.key({ modkey, "Control" }, "l", function () awful.util.spawn("slock") end,
+    awful.key({ modkey, "Control" }, "l", function () awful.util.spawn("betterlockscreen -l blur") awful.util.spawn("systemctl suspend") end,
               {description = "lock screen", group = "hotkeys"}),
 
     awful.key({ modkey, "Control" }, "s", function () awful.util.spawn("spotify") end,
