@@ -163,6 +163,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dom/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["vim-closer"] = {
+    loaded = true,
+    path = "/home/dom/.local/share/nvim/site/pack/packer/start/vim-closer",
+    url = "https://github.com/rstacruz/vim-closer"
   }
 }
 
