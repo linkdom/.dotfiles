@@ -29,4 +29,12 @@ return require('packer').startup(function()
     use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
     use "lukas-reineke/indent-blankline.nvim"
+
+    use {
+        "ThePrimeagen/harpoon",
+        requires = {
+            'nvim-lua/plenary.nvim'
+        }
+    }
+
 end)
