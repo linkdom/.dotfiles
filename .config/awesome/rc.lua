@@ -110,10 +110,10 @@ awful.layout.layouts = {
     --awful.layout.suit.fair,
     --awful.layout.suit.fair.horizontal,
     --awful.layout.suit.spiral,
-    awful.layout.suit.spiral.dwindle,
-    awful.layout.suit.max,
-    --awful.layout.suit.max.fullscreen,
     awful.layout.suit.magnifier,
+    awful.layout.suit.spiral.dwindle,
+    --awful.layout.suit.max,
+    --awful.layout.suit.max.fullscreen,
     --awful.layout.suit.corner.nw,
     --awful.layout.suit.corner.ne,
     --awful.layout.suit.corner.sw,
@@ -265,13 +265,6 @@ globalkeys = mytable.join(
     -- https://github.com/lcpz/dots/blob/master/bin/screenshot
     awful.key({ altkey }, "p", function() os.execute("screenshot") end,
               {description = "take a screenshot", group = "hotkeys"}),
-
-    -- X screen locker
-    awful.key({ altkey, "Control" }, "l", function () os.execute("betterlockscreen -l blur") os.execute("systemctl suspend") end,
-              {description = "lock screen", group = "hotkeys"}),
-
-    -- awful.key({ altkey, "Control" }, "l", function () awful.util.spawn("betterlockscreen -l blur") end,
-    --           {description = "lock the screen", group = "hotkeys"}),
 
     -- Show help
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
@@ -549,8 +542,12 @@ globalkeys = mytable.join(
     awful.key({ modkey, "Control" }, "b", function () awful.util.spawn("brave") end,
               {description = "brave", group = "apps"}),
 
-    awful.key({ modkey, "Control" }, "l", function () awful.util.spawn("betterlockscreen -l blur") awful.util.spawn("systemctl suspend") end,
-              {description = "lock screen", group = "hotkeys"}),
+    awful.key({ modkey, "Control" }, "l", function () awful.util.spawn("betterlockscreen -l blur") end,
+              {description = "lock screen without suspend", group = "hotkeys"}),
+
+    awful.key({ modkey, "Control" }, "ö", function () awful.util.spawn("betterlockscreen -l blur") awful.util.spawn("systemctl suspend") end,
+              {description = "lock screen with suspend", group = "hotkeys"}),
+
 
     awful.key({ modkey, "Control" }, "s", function () awful.util.spawn("spotify") end,
               {description = "spotify", group = "apps"}),

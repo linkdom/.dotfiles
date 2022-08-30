@@ -11,6 +11,7 @@ alias 'v'='nvim'
 alias 'update'='sudo pacman -Syyu && yay -Syyu'
 alias '..'='cd ..'
 alias '...'='cd ../../'
+alias 'vpn'='sudo openfortivpn -c /etc/openfortivpn/config'
 
 # laravel
 alias 'pamfs'='php artisan migrate:fresh && php artisan db:seed'
