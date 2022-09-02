@@ -24,6 +24,9 @@ map('n', '<leader>j', ':lua require("harpoon.ui").nav_file(2)<CR>', opts)
 map('n', '<leader>k', ':lua require("harpoon.ui").nav_file(3)<CR>', opts)
 map('n', '<leader>l', ':lua require("harpoon.ui").nav_file(4)<CR>', opts)
 
+-- Markdown Preview
+map('n', '<leader>!', ':MarkdownPreview<CR>', opts)
+
 --map('n', '<leader>k', ':wincmd k<CR>', opts)
 --map('n', '<leader>j', ':wincmd j<CR>', opts)
 --map('n', '<leader>h', ':wincmd h<CR>', opts)
