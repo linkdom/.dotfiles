@@ -23,7 +23,13 @@ set.relativenumber = true
 set.cursorline = true
 
 set.hidden = true
-
 --uncomment this if i want folding capability - fold with zc and unfold with zo
 --set.foldmethod = "expr"
 --set.foldexpr = "nvim_treesitter#foldexpr()"
+
+vim.cmd([[
+set history=100
+set undolevels=1000
+set undofile
+set clipboard=unnamedplus
+]])

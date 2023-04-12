@@ -20,7 +20,7 @@ local mytable       = awful.util.table or gears.table -- 4.{0,1} compatibility
 -- }}}
 
 -- {{{ Error handling
-
+awful.util.spawn("lxpolkit &")
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
 if awesome.startup_errors then
@@ -102,16 +102,16 @@ local browser      = "brave"
 awful.util.terminal = terminal
 awful.util.tagnames = { "1", "2", "3", "4", "5" }
 awful.layout.layouts = {
-    --awful.layout.suit.floating,
     --awful.layout.suit.tile,
     --awful.layout.suit.tile.left,
     --awful.layout.suit.tile.bottom,
     --awful.layout.suit.tile.top,
     --awful.layout.suit.fair,
-    --awful.layout.suit.fair.horizontal,
+    awful.layout.suit.fair.horizontal,
     --awful.layout.suit.spiral,
     awful.layout.suit.magnifier,
     awful.layout.suit.spiral.dwindle,
+    awful.layout.suit.floating,
     --awful.layout.suit.max,
     --awful.layout.suit.max.fullscreen,
     --awful.layout.suit.corner.nw,
@@ -536,7 +536,7 @@ globalkeys = mytable.join(
         {description = "show rofi", group = "launcher"}),
     --]]
     -- Prompt
-    awful.key({ modkey }, "r", function () awful.util.spawn("dmenu_run") end,
+    awful.key({ modkey }, "r", function () awful.util.spawn("rofi -show drun -theme /home/dom/.config/rofi/launchers/type-7/style-2.rasi") end,
               {description = "run prompt", group = "launcher"}),
 
     awful.key({ modkey, "Control" }, "b", function () awful.util.spawn("brave") end,

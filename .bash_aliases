@@ -20,6 +20,12 @@ alias 'nrw'='npm run watch'
 alias 'larapack'='php artisan make:model -msfc $1'
 alias 'console'='php artisan tinker'
 
+# strapi
+alias 'sbas'='rm -rf .cache && strapi build && npm run develop'
+
+# npm
+alias 'nrd'='npm run develop'
+
 # git
 alias 'gis'='git status'
 
@@ -27,6 +33,10 @@ alias 'gis'='git status'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+#mkdir
+alias mkdir='mkdir -p'
+
 
 #functions
 alias 'open'='function _open()

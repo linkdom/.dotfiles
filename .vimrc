@@ -36,7 +36,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-source ~/.config/vim/plugins/coc.vim
 source ~/.config/vim/plugins/fzf.vim
 source ~/.config/vim/plugins/commentary.vim
 source ~/.config/vim/plugins/surround.vim
