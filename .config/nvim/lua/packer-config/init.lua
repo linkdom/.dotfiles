@@ -101,5 +101,6 @@ return require('packer').startup(function()
     }
 
     use 'mbbill/undotree'
+    use 'vimwiki/vimwiki'
 
 end)
