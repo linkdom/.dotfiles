@@ -10,6 +10,7 @@ return require('packer').startup(function()
     }
     use "nvim-lua/plenary.nvim"
     use "nvim-treesitter/nvim-treesitter"
+    use "nvim-treesitter/nvim-treesitter-context"
 
     use {
         'nvim-telescope/telescope.nvim',

@@ -57,6 +57,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protoc
 local lspconfig = require('lspconfig')
 local servers = {
     "bashls",
+    "clangd",
     "diagnosticls",
     "dockerls",
     "dotls",
@@ -65,12 +66,12 @@ local servers = {
     "jsonls",
     "quick_lint_js",
     "tsserver",
-    "sumneko_lua",
+    "lua_ls",
     "marksman",
     "intelephense",
     "phpactor",
     "pyright",
-    "sqls",
+    "sqlls",
     "CSS",
     "tailwindcss",
     "tsserver",
