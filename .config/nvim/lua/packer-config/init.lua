@@ -17,6 +17,10 @@ return require('packer').startup(function()
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
+    use {
+        'folke/neodev.nvim', opts = {}
+    }
+
     use "jose-elias-alvarez/null-ls.nvim"
 
     use {
@@ -26,6 +30,7 @@ return require('packer').startup(function()
         "jayp0521/mason-nvim-dap.nvim",
 
         -- DAP
+        "nvim-neotest/nvim-nio",
         "mfussenegger/nvim-dap",
         "rcarriga/nvim-dap-ui",
         "theHamsta/nvim-dap-virtual-text",

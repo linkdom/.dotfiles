@@ -18,6 +18,7 @@ map('n', '<leader>ff', ':Telescope find_files<CR>', opts)
 map('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
 map('n', '<leader>fe', ':Telescope diagnostics<CR>', opts)
 map('n', '<leader>fc', ':Telescope git_commits<CR>', opts)
+map('n', '<leader>fr', ':lua require("telescope.builtin").lsp_references() <CR>', opts)
 
 -- Harpoon
 map('n', '<leader>m', ':lua require("harpoon.mark").add_file() <CR>', opts)

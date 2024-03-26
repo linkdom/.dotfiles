@@ -26,6 +26,15 @@ set.hidden = true
 --uncomment this if i want folding capability - fold with zc and unfold with zo
 --set.foldmethod = "expr"
 --set.foldexpr = "nvim_treesitter#foldexpr()"
+--
+
+vim.g.vimwiki_list = {
+    {
+        path = '~/vimwiki/',
+        syntax = 'markdown',
+        ext = '.md'
+    }
+}
 
 vim.cmd([[
 set history=100

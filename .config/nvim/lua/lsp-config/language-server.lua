@@ -31,12 +31,27 @@ local servers = {
     "intelephense",
     "phpactor",
     "pyright",
-    "rust_analyzer",
-    -- "rustfmt",
     "sqlls",
     "tailwindcss",
     "lemminx",
     "yamlls",
+}
+
+lspconfig.rust_analyzer.setup {
+    -- capabilities = capabilities,
+
+    -- on_attach = function ()
+    --     vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0})
+    --     vim.keymap.set("n", "<leader>df", vim.diagnostic.goto_next, {buffer=0})
+    --     vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev, {buffer=0})
+    --     vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, {buffer=0})
+    --     vim.keymap.set("n", "<leader>do", vim.lsp.buf.code_action, {buffer=0})
+    -- end,
+
+    -- cmd = {
+    --     "rustup", "run", "stable", "rust_analyzer"
+    -- }
+
 }
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
@@ -47,6 +62,7 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
     on_attach = function ()
         vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0})
+        vim.keymap.set("n", "<leader>gi", vim.diagnostic.open_float, {buffer=0})
         vim.keymap.set("n", "<leader>df", vim.diagnostic.goto_next, {buffer=0})
         vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev, {buffer=0})
         vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, {buffer=0})
