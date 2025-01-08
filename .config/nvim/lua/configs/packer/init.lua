@@ -4,10 +4,17 @@ return require('packer').startup(function()
     use "nvim-treesitter/nvim-treesitter" -- Syntax highlighting and parsing based on Tree-sitter
     use "nvim-treesitter/nvim-treesitter-context" -- Show code context at the top of the screen while scrolling
     use 'nvim-treesitter/nvim-treesitter-textobjects' -- Syntax-aware text objects for Treesitter
+    use 'nvim-tree/nvim-web-devicons' -- File icons
+    use 'onsails/lspkind.nvim'       -- LSP completion icons
 
     use {
         'nvim-telescope/telescope.nvim', -- Fuzzy finder and file picker
         requires = { {'nvim-lua/plenary.nvim'} }
+    }
+
+    use {
+        'nvim-telescope/telescope-fzf-native.nvim',
+        run = 'make'
     }
 
     use "jose-elias-alvarez/null-ls.nvim" -- LSP diagnostics and formatting via external tools
@@ -33,7 +40,13 @@ return require('packer').startup(function()
     use 'hrsh7th/cmp-path' -- Path completion source for nvim-cmp
     use 'hrsh7th/cmp-cmdline' -- Command line completion source for nvim-cmp
     use 'hrsh7th/nvim-cmp' -- Autocompletion engine
-    use { "L3MON4D3/LuaSnip", run = "make install_jsregexp" } -- Snippet engine
+
+    use {
+        'L3MON4D3/LuaSnip',  -- Snippet engine
+        run = "make install_jsregexp",
+        requires = { 'rafamadriz/friendly-snippets' } -- Default Snippets
+    }
+
     use 'saadparwaiz1/cmp_luasnip' -- LuaSnip integration for nvim-cmp
     use 'hrsh7th/cmp-nvim-lsp-signature-help' -- Display function signatures during completion
 

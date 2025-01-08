@@ -3,8 +3,6 @@ local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = ' '
 
-map('i', '<leader><alt>', '<esc>', opts)
-
 -- Default
 map('n', '<leader>h', ':wincmd h<CR>', opts)
 map('n', '<leader>j', ':wincmd j<CR>', opts)
@@ -19,12 +17,17 @@ vim.keymap.set('n', '<leader>dn', vim.diagnostic.goto_next, opts)
 vim.keymap.set('n', '<leader>dsl', vim.diagnostic.setloclist, opts)
 
 -- Telescope
--- map('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
 map('n', '<leader>ff', ':Telescope find_files<CR>', opts)
 map('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
 map('n', '<leader>fe', ':Telescope diagnostics<CR>', opts)
 map('n', '<leader>fc', ':Telescope git_commits<CR>', opts)
 map('n', '<leader>fr', ':lua require("telescope.builtin").lsp_references() <CR>', opts)
+map('n', '<leader>fb', '<cmd>Telescope buffers<cr>', { noremap = true })
+map('n', '<leader>fht', '<cmd>Telescope help_tags<cr>', { noremap = true })
+map('n', '<leader>fnv', '<cmd>Telescope find_files search_dirs={"~/.config/nvim"}<cr>', { noremap = true })
+map('n', '<leader>fkm', '<cmd>Telescope keymaps<cr>', { noremap = true })
+map('n', '<leader>fch', '<cmd>Telescope command_history<cr>', { noremap = true })
+map('n', '<leader>fcom', '<cmd>Telescope commands<cr>', { noremap = true })
 
 -- Harpoon
 map('n', '<leader>m', ':lua require("harpoon.mark").add_file() <CR>', opts)
