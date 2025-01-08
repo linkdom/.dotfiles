@@ -12,8 +12,14 @@ map('n', '<leader>k', ':wincmd k<CR>', opts)
 map('n', '<leader>l', ':wincmd l<CR>', opts)
 map('n', '<leader>tt', ':tab split<CR>', opts)
 
+-- Diagnostic
+vim.keymap.set('n', '<leader>dof', vim.diagnostic.open_float, opts)
+vim.keymap.set('n', '<leader>dp', vim.diagnostic.goto_prev, opts)
+vim.keymap.set('n', '<leader>dn', vim.diagnostic.goto_next, opts)
+vim.keymap.set('n', '<leader>dsl', vim.diagnostic.setloclist, opts)
+
 -- Telescope
-map('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
+-- map('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
 map('n', '<leader>ff', ':Telescope find_files<CR>', opts)
 map('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
 map('n', '<leader>fe', ':Telescope diagnostics<CR>', opts)
@@ -85,3 +91,10 @@ vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>')
 
 vim.keymap.set('n', '<leader>i', '<C-]>')
 vim.keymap.set('n', '<leader>o', '<C-t>')
+
+vim.keymap.set('n', '<leader>la', ':Laravel artisan<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>lr', ':Laravel routes<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>lm', ':Laravel related<CR>', { noremap = true, silent = true })
+
+-- Command to open Oil in a vertical split (20% width)
+vim.keymap.set("n", "<leader>e", ":Oil --float<CR>", { noremap = true, silent = true })
