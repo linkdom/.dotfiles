@@ -11,7 +11,7 @@ require("mason").setup({
     }
 })
 require("mason-null-ls").setup({
-    ensure_installed = { "lua_ls" },
+    ensure_installed = { "lua_ls", "vue-language-server" },
     automatic_installation = true,
     automatic_setup = true,
 })

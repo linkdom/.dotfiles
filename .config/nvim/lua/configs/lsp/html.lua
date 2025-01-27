@@ -7,7 +7,7 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 lspconfig.stimulus_ls.setup({
   capabilities = capabilities,
   cmd = { "stimulus-language-server", "--stdio" }, -- Command to start the LSP
-  filetypes = { "html", "blade", "javascript", "typescript", "vue" },  -- Filetypes to attach the LSP to
+  filetypes = { "html", "blade", "javascript", "typescript" },  -- Filetypes to attach the LSP to
   root_dir = lspconfig.util.root_pattern("package.json", ".git", "stimulus.js", "controllers"), -- Project root detection
   settings = {
     stimulus = {

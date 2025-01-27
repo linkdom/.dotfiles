@@ -7,7 +7,6 @@ local servers = {
     "bashls",
     "clangd",
     "diagnosticls",
-    "emmet_ls",
     "gopls",
     "ts_ls",
 }
