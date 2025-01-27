@@ -22,5 +22,9 @@ null_ls.setup({
         null_ls.builtins.code_actions.refactoring,
         null_ls.builtins.completion.luasnip,
         null_ls.builtins.formatting.blade_formatter,
+        null_ls.builtins.formatting.prettier.with({
+            command = vim.fn.stdpath("data") .. "/mason/bin/prettier",
+            filetypes = { "javascript", "typescript", "vue", "html", "css", "json" }
+        }),
     },
 })

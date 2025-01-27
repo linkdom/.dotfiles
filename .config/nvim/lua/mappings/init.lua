@@ -101,3 +101,6 @@ vim.keymap.set('n', '<leader>lm', ':Laravel related<CR>', { noremap = true, sile
 
 -- Command to open Oil in a vertical split (20% width)
 vim.keymap.set("n", "<leader>e", ":Oil --float<CR>", { noremap = true, silent = true })
+
+-- Prettier format
+vim.keymap.set('n', '<leader>p', '<cmd>lua vim.lsp.buf.format()<CR>', { noremap = true, silent = true })
